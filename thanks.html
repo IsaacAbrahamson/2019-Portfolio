@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Isaac Abrahamson</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Isaac Abrahamson is a self-motivated and talented young web developer working primarily with full-stack JavaScript and WordPress. He currently lives near Iowa City, Iowa.">
+<meta name="keywords" content="web developer, freelance web developer, JavaScript developer, WordPress developer, Isaac Abrahamson">
+<meta name="author" content="Isaac Abrahamson">
+
+<!-- ScrollReveal.js -->
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+  window.sr = ScrollReveal();
+
+  // Add class to <html> if ScrollReveal is supported
+  // Note: this method is deprecated, and only works in version 3
+  if (sr.isSupported()) {
+    document.documentElement.classList.add('sr');
+  }
+</script>
+<style>
+  /* Ensure elements load hidden before ScrollReveal runs */
+
+  .sr .fooReveal {
+    visibility: hidden;
+  }
+</style>
+
+<!-- Bulma Framework -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500" rel="stylesheet">
+
+<!-- Icons -->
+<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+  crossorigin="anonymous"></script>
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="css/thanks.css">
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+
+
+<main>
+  <div id="overlay" class="bg-animated">
+
+    <section class="section info-section">
+      <h2>Success!</h2>
+      <div class="container">
+        <div class="columns is-mobile is-centered" id="info">
+          <div class="column is-11-mobile is-four-fifths-tablet is-two-thirds-desktop">
+            <p>Your message has successfully reached my inbox. I'll try my best to get back to you within two business days. Thanks for you interest, and I can't wait to work together with you!</p>
+          </div>
+          <a href="/portfolio/"><i data-feather="arrow-left"></i> return to isaacabrahamson.com</a>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+</main>
+
+
+
+
+<!-- Internet Explorer Warning -->
+<p id="ie">This website only works with modern web browsers. Please switch to any modern browser (i.e. not Internet Explorer) to properly
+  view my site. Thank you!</p>
+
+<!-- Initialize libraries -->
+<script>
+  feather.replace()
+
+  sr.reveal('h1', {
+    duration: 500,
+    distance: '10px',
+    scale: '1',
+    delay: 200
+  });
+
+  sr.reveal('#hero p.subtitle', {
+    duration: 500,
+    distance: '20px',
+    scale: '1',
+    delay: 400
+  });
+</script>
