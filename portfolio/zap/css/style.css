@@ -821,14 +821,9 @@ sup {
   font-family: logo;
   font-style: normal;
   font-weight: 400;
-  src: url('../../logo.woff2') format('woff2'), 
-       url('../../logo.woff') format('woff'),
-       url('../../logo.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: heading;
-  src: url('../heading.ttf');
+  src: url('../../../logo.woff2') format('woff2'), 
+       url('../../../logo.woff') format('woff'),
+       url('../../../logo.ttf') format('truetype');
 }
 
 
