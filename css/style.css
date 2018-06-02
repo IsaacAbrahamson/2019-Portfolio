@@ -80,12 +80,24 @@ light pink - #f4a3b6
 =                GENERAL STYLES               =
 =============================================*/
 main {
-  background: url(../bg.jpg);
+  background: url(../bg.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
   z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    background: url(../bg-tablet.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    background: url(../bg-mobile.jpg);
+  }
 }
 
 #overlay {
@@ -130,7 +142,7 @@ hr.divider {
   height: 0;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   hr.divider {
     width: 30%;
   }
@@ -151,6 +163,18 @@ hr.divider {
 	}
 }
 
+.spacer {
+  height: 0;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 600px) {	
+  .spacer {
+    margin-bottom: 60px;
+  }    
+}
+
+
 
 
 
@@ -166,7 +190,7 @@ hr.divider {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button, li, input, blockquote, cite {
-  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-family:'Montserrat', 'Open Sans', sans-serif;
   font-size: 3em;
 }
 
@@ -205,6 +229,12 @@ h2 {
   line-height: 60px;
 }
 
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 50px;
+  }
+}
+
 h5 {
   margin-top: 25px;
   color: #9294a8;
@@ -223,7 +253,7 @@ h3 {
   margin-bottom: 3px;
 }
 
-ul li {
+ul > li {
   font-size: 1.7em;
   color: #9294a8;
   display: flex;
@@ -232,11 +262,11 @@ ul li {
   line-height: 130%;
 }
 
-ul li:last-of-type {
+ul > li:last-of-type {
   margin-bottom: 30px;
 }
 
-ul li:before {
+ul > li:before {
   content: "\2022";
   margin-right: 6px;
   margin-bottom: 2px;
@@ -286,15 +316,15 @@ cite {
 
 #hero .learn-more .arrow {
   position: relative;
-  top: 7px;
+  top: 2px;
   right: 15px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 28px;
   color: #b9b9b9;
 }
 
-@media screen and (max-width: 600px) , screen and (max-height: 600px) {
-  #hero .learn-more {
+@media screen and (max-width: 1024px) {
+  #hero .hero-foot {
     display: none;
   }
 }
@@ -321,6 +351,33 @@ cite {
   padding-bottom: 40px;
 }
 
+#about h2 {
+  margin-bottom: 60px;
+}
+
+#about p.mobile {
+  display: none;
+}
+
+@media screen and (max-height: 700px) {  
+  #about p.mobile {
+    display: block;
+  }  
+  #about p.full {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {  
+  #about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  #about h2 {
+    margin-bottom: 30px;
+  }
+}
 
 
 
@@ -332,25 +389,66 @@ cite {
 =============================================*/
 #cases {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
-@media screen and (min-height: 700px) {
+@media screen and (max-width: 1024px) {
   #cases {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 50px;
+  padding-bottom: 150px;
   }
 }
 
-@media screen and (min-height: 1000px) {
+@media screen and (max-width: 700px) {
   #cases {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 0px;
+    padding-bottom: 60px;
   }
 }
 
 #cases h5 {
   margin-bottom: 120px;
+}
+
+@media screen and (max-width: 700px) {
+  #cases h5 {
+    margin-bottom: 100px;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  #cases h5 {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #cases h5 {
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #cases h5 {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 350px) {
+  #cases h5 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #cases h3 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  #cases h3 {
+    font-size: 20px;
+  }
 }
 
 .testimonial {
@@ -377,7 +475,7 @@ blockquote .quote {
 
 @media only screen and (max-width: 768px) {
   .testimonial {
-    margin: 120px 15%;
+    margin: 60px 15%;
   }
 }
 
@@ -403,8 +501,21 @@ blockquote .quote {
   padding-bottom: 100px;
 }
 
+@media screen and (max-width: 700px) {
+  #projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 #projects h5 {
   margin-bottom: 120px;
+}
+
+@media screen and (max-width: 700px) {
+  #projects h5 {
+    margin-bottom: 60px;
+  }
 }
 
 #projects img {
@@ -450,6 +561,16 @@ blockquote .quote {
   margin-bottom: 120px;
 }
 
+@media screen and (max-width: 700px) {
+  #contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  #contact h5 {
+    margin-bottom: 60px;
+  }
+}
+
 #contact form {
   display: flex;
   flex-direction: column;
@@ -466,10 +587,9 @@ blockquote .quote {
 #contact .value-input {
   height: 55px;
   font-size: 24px;
-  border: solid 1px #fff !important;
-  border-bottom: solid 1px #eaeaea !important;
-  border-radius: 0px;
-  box-shadow: none !important;
+  border: none !important;
+  -webkit-appearance: none;
+  box-shadow: 0px 1px #eaeaea;
   outline: none !important; /* FIXME: add alternate outline */
   display: block;
   margin-bottom: 40px;
@@ -508,11 +628,11 @@ blockquote .quote {
 }
 
 #contact .value-input:hover {  
-  border-bottom: solid 1px #b9b9b9 !important;
+  box-shadow: 0px 1px #b9b9b9 !important;
 }
 
-#contact .value-input:focus {  
-  border-bottom: solid 1px #394146 !important;
+#contact .value-input:focus {
+  box-shadow: 0px 1px #394146 !important;
 }
 
 /* .btn-fade {
@@ -612,6 +732,195 @@ sup {
 
 
 /*=============================================
+= NAVIGATION                                  =
+=============================================*/
+nav {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  justify-content: center;
+  z-index: 1000;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  transition: opacity 200ms;
+}
+
+nav .logo p {
+  font-family: logo;
+  color: #9294a84d;
+  font-size: 35px;
+}
+
+.nav-inner {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    top: 30px;
+  }
+
+	nav .logo p {
+    font-size: 24px;
+  }
+}
+
+nav ul.desktop-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+nav button.hamburger:focus {
+  outline: none !important;
+}
+
+nav button.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: #575869;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    position: fixed;
+  }
+
+  nav button.hamburger {
+    display: block;
+    background: rgba(128, 128, 128, 0.1);
+  }
+
+  nav ul.desktop-menu {
+    display: none;
+  }
+
+  .nav-inner {
+    opacity: 1;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 60%;
+    background: #2b2b2b;
+    transition: left 1s;
+    left: -100%;
+    z-index: 9999;
+  }
+
+  body.menu-active .mobile-menu {
+    left: 0px;
+  }
+  body.menu-active nav .logo {
+    opacity: 0 !important;
+    z-index: -100;
+  }
+
+  main {
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 1024px) , screen and (max-height: 650px) {
+  nav .logo p {
+    font-size: 24px;
+  }
+
+  #hero {
+    padding-top: 80px;
+  }
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  color: #9294a84d;
+  font-weight: 500;
+  transition: 400ms;
+}
+
+nav a li {
+  font-size: 30px;
+}
+
+nav a:nth-of-type(2) {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 360px) {
+  nav {
+    top: 20px;
+  }
+
+	nav .logo p {
+    font-size: 20px;
+  }
+}
+
+.mobile-menu ul {
+  padding: 40px;
+}
+
+.mobile-menu a {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  transition: 400ms;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.mobile-menu a:first-of-type, .mobile-menu a:last-of-type {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.mobile-menu a li {
+  font-size: 5vw;
+}
+
+@media screen and (max-width: 500px) {
+  .mobile-menu a li {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .mobile-menu {
+    width: 70%;
+  }
+
+  .mobile-menu a li {
+    font-size: 7.2vw;
+  }
+}
+
+
+
+
+
+
+
+/*=============================================
 =                   BUTTONS                   =
 =============================================*/
 
@@ -622,6 +931,28 @@ sup {
 #contact input[type=submit].btn-fill:hover {
   background: black;
   color: white;
+}
+
+
+
+
+
+
+/*=============================================
+= FONTS                                       =
+=============================================*/
+@font-face {
+  font-family: logo;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../logo.woff2') format('woff2'), 
+       url('../logo.woff') format('woff'),
+       url('../logo.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: heading;
+  src: url('../heading.ttf');
 }
 
 

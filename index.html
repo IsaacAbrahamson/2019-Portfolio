@@ -6,6 +6,29 @@
 <meta name="keywords" content="web developer, freelance web developer, JavaScript developer, WordPress developer, Isaac Abrahamson">
 <meta name="author" content="Isaac Abrahamson">
 
+<!-- Preload background -->
+<link rel="preload" as="image" href="bg-mobile.jpg">
+<link rel="preload" as="image" href="bg.jpg">
+<link rel="preload" as="image" href="bg-tablet.jpg">
+<!-- TODO: work on this -->
+<!-- <script type="text/javascript">
+  if (document.images) {
+    if (window.innerWidth > 1000) {
+      let bg = new Image()
+      bg.src = "./bg.jpg"
+      console.log('preloading desktop')
+    } else if (window.innerWidth > 500) {
+      let bgTablet = new Image()
+      bgTablet.src = "./bg-tablet.jpg"
+      console.log('preloading tablet')
+    } else {
+      let bgMobile = new Image()
+      bgMobile.src = "./bg-mobile.jpg"
+      console.log('preloading mobile')
+    }
+  }
+</script> -->
+
 <!-- ScrollReveal.js -->
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script>
@@ -33,10 +56,9 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500" rel="stylesheet">
 
 <!-- Icons -->
-<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
   crossorigin="anonymous"></script>
+<link href="css/hamburgers.css" rel="stylesheet">
 
 <!-- Custom Styles -->
 <link rel="stylesheet" href="css/style.css">
@@ -44,9 +66,50 @@
 <link rel="stylesheet" type="text/css" href="css/ie.css" />
 <![endif]-->
 
+<div class="mobile-menu">
+  <ul class="nav-menu">
+    <a href="#hero">
+      <li>Home</li>
+    </a>
+    <a href="#about">
+      <li>About</li>
+    </a>
+    <a href="#cases">
+      <li>Case Studies</li>
+    </a>
+    <a href="#contact">
+      <li>Contact</li>
+    </a>
+  </ul>
+</div>
 
 <main>
   <div id="overlay" class="bg-animated">
+    <nav>
+      <div class="nav-inner">
+        <div class="logo">
+          <p>Isaac Abrahamson</p>
+        </div>
+
+        <button class="hamburger hamburger--emphatic" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <ul class="desktop-menu">
+          <a href="#about">
+            <li>about</li>
+          </a>
+          <a href="#cases">
+            <li>case studies</li>
+          </a>
+          <a href="#contact">
+            <li>contact</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
 
     <section class="section hero is-fullheight" id="hero">
       <div class="hero-body">
@@ -62,9 +125,7 @@
 
       <div class="hero-foot">
         <p class="learn-more learn-more-animated">
-          <span class="arrow">
-            <i data-feather="chevrons-left"></i>
-          </span>Learn More</p>
+          <span class="arrow">↼</span>Learn More</p>
       </div>
     </section>
 
@@ -72,22 +133,25 @@
 
     <section class="section info-section" id="about">
       <h2>About me</h2>
-      <hr class="line"></hr>
+      <!-- <hr class="line"></hr> -->
       <div class="container">
         <div class="columns is-mobile is-centered">
           <div class="column is-11-mobile is-four-fifths-tablet is-two-thirds-desktop">
-            <p>Designing and implementing creative software isn't something new to me. At just five and six, I would spend time
+            <p class="full">Designing and implementing creative software isn't something new to me. At just five and six, I would spend time
               drawing out website and game ideas on paper. When I was about ten, I built a "functional" website by linking
               together HTML pages in MS Publisher. At fourteen, I built and ran a Minecraft server with custom modifications,
               and when I was fifteen, I took the motivation and resourcefulness I had learned as a homeschooler and taught
               myself how to program and build websites. Now I'm eighteen, a capable web developer, and I'm heading off to
               college next school year to study Computer Science and Bible.</p>
+            <p class="mobile">Designing and implementing creative software isn't something new to me. At five and six, I would spend time
+              drawing out website and game ideas on paper. I then taught myself how to program applications and eventually build websites. I'm eighteen now, a capable web developer, and I'm further studying computer science and other interests.</p>
           </div>
         </div>
       </div>
     </section>
 
     <hr class="divider"></hr>
+    <div class="spacer"></div>
 
     <section class="section info-section" id="cases">
       <h2>Case Studies</h2>
@@ -208,7 +272,7 @@
     <section class="section" id="contact">
       <h2>Contact me</h2>
       <h5>Interested in working on a project together? I'm open for new business.</h5>
-      <form action="https://formspree.io/hello@isaacabrahamson.com" method="POST">
+      <form action="https://formspree.io/hello@isaacabrahamson.com" method="POST" autocomplete="off">
         <input class="value-input" type="text" name="name" placeholder="Your name" data-lpignore="true">
         <input class="value-input" type="email" name="email" placeholder="Your email" data-lpignore="true">
         <input class="value-input input-last" type="text" name="message" placeholder="Your message" data-lpignore="true">
@@ -221,11 +285,19 @@
     <hr class="divider"></hr>
 
     <section class="section" id="social">
-      <p>Designed and developed by me <sup>duh</sup></p>
+      <p>Designed and developed by me
+        <sup>duh</sup>
+      </p>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/isaacabrahamson/" target="_blank"><i class="fab fa-linkedin-in fa-3x"></i></a>
-        <a href="https://github.com/IsaacAbrahamson" target="_blank"><i class="fab fa-github fa-3x"></i></a>
-        <a href="https://forum.freecodecamp.org/u/IsaacAbrahamson/summary" target="_blank"><i class="fab fa-free-code-camp fa-3x"></i></a>
+        <a href="https://www.linkedin.com/in/isaacabrahamson/" target="_blank">
+          <i class="fab fa-linkedin-in fa-3x"></i>
+        </a>
+        <a href="https://github.com/IsaacAbrahamson" target="_blank">
+          <i class="fab fa-github fa-3x"></i>
+        </a>
+        <a href="https://forum.freecodecamp.org/u/IsaacAbrahamson/summary" target="_blank">
+          <i class="fab fa-free-code-camp fa-3x"></i>
+        </a>
       </div>
     </section>
 
@@ -241,8 +313,6 @@
 
 <!-- Initialize libraries -->
 <script>
-  feather.replace()
-
   sr.reveal('h1', {
     duration: 500,
     distance: '10px',
@@ -255,6 +325,11 @@
     distance: '20px',
     scale: '1',
     delay: 400
+  });
+
+  var hamburger = document.querySelector(".hamburger");
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("is-active");
   });
 </script>
 
