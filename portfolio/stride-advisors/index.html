@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Isaac Abrahamson</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="Isaac Abrahamson is a self-motivated and talented young web developer working primarily with full-stack JavaScript and WordPress. He currently lives near Iowa City, Iowa.">
+<meta name="keywords" content="web developer, freelance web developer, JavaScript developer, WordPress developer, Isaac Abrahamson">
+<meta name="author" content="Isaac Abrahamson">
+
+<!-- Preload background -->
+<link rel="preload" as="image" href="background.jpg">
+
+
+<!-- ScrollReveal.js -->
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+  window.sr = ScrollReveal();
+
+  // Add class to <html> if ScrollReveal is supported
+  // Note: this method is deprecated, and only works in version 3
+  if (sr.isSupported()) {
+    document.documentElement.classList.add('sr');
+  }
+</script>
+<style>
+  /* Ensure elements load hidden before ScrollReveal runs */
+
+  .sr .fooReveal {
+    visibility: hidden;
+  }
+</style>
+
+<!-- Bulma Framework -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500" rel="stylesheet">
+
+<!-- Icons -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+  crossorigin="anonymous"></script>
+<link href="css/hamburgers.css" rel="stylesheet">
+
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="css/style.css">
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+
+<div class="mobile-menu">
+  <ul class="nav-menu">
+    <a href="#hero">
+      <li>Home</li>
+    </a>
+    <a href="#about">
+      <li>About</li>
+    </a>
+    <a href="#cases">
+      <li>Case Studies</li>
+    </a>
+    <a href="#contact">
+      <li>Contact</li>
+    </a>
+  </ul>
+</div>
+
+
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">
+      <p>Isaac Abrahamson</p>
+    </div>
+
+    <button class="hamburger hamburger--emphatic" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <ul class="desktop-menu">
+      <a href="#about">
+        <li>about</li>
+      </a>
+      <a href="#cases">
+        <li>case studies</li>
+      </a>
+      <a href="#contact">
+        <li>contact</li>
+      </a>
+    </ul>
+  </div>
+</nav>
+
+
+<main>
+  <section class="hero" id="header" data-type="background" data-speed="4"></section>
+
+  <section class="section" id="company">
+    <div class="container">
+      <div class="columns is-centered">
+
+        <div class="column is-3">
+          <img src="logo.png" alt="An image of Stride Advisors">
+        </div>
+
+        <div class="column"></div>
+
+        <div class="column is-8 is-11-mobile">
+          <h3>Stride Advisors</h3>
+          <p>Stride Advisors is a certified public accounting firm that provides tax and payroll services to companies. I was
+            hired directly by Stride Advisor's digital marketing advisor to create a series of customizable landing pages.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section alternate" id="overview">
+    <div class="container">
+      <div class="columns is-desktop">
+        <div class="column is-11-mobile is-11-tablet is-5-desktop" id="problem">
+          <h2>The Problem</h2>
+          <p>Stride Advisors wanted to run some Google ads, but was getting penalized because their main website did not have
+            content that directly applied to the ad. They also wanted a way to capture the vistor's email in return for a
+            small PDF that gave more information about the specific service.</p>
+        </div>
+
+        <div class="column vertical-spacer">
+          <div class="outer">
+            <div class="inner"></div>
+          </div>
+        </div>
+
+        <div class="column is-11-mobile is-11-tablet is-5-desktop" id="solution">
+          <h2>The Solution</h2>
+          <p>I designed and built a customizable page template that could be easily modified to create as many specific landing
+            pages as needed. I purposely created the page as lightweight as possible so that it could be easily uploaded
+            to the already existing WordPress theme. I added a form that gave the visitor a free PDF and saved their email
+            to a CSV.</p>
+        </div>
+      </div>
+
+      <div class="video-container">
+        <script src="https://fast.wistia.com/embed/medias/ggv9bpy1ql.jsonp" async></script>
+        <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+        <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+          <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+            <span class="wistia_embed wistia_async_ggv9bpy1ql popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="design">
+    <div class="container">
+      <div class="columns section-columns is-centered">
+        <div class="column is-10">
+          <div class="columns is-centered">
+
+            <div class="column is-6">
+              <h3>Design Overview</h3>
+              <p>Since the landing pages would be integrated into the existing Stride Advisors website, they needed to look
+                almost identical to the current style. I copied most of the CSS from the main website, tweaked it to make
+                it work better, and applied it to my new HTML and PHP markup. The hardest part of this project was finding
+                a WordPress email form plugin that actually did what I wanted it to do and nothing more.</p>
+            </div>
+
+            <div class="column">
+              <img src="stride.png" alt="An image of Stride Advisors landing page.">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="section alternate" id="media">
+  <div class="container">
+
+    <div class="columns section-columns column-info is-centered">
+      <div class="column is-10">
+        <div class="columns section-columns is-centered">
+
+          <div class="column is-8">
+            <h3>Finished Design</h3>
+            <p>The final design looked practically identical to the actual website's style but had the specialized information
+              and contact form needed. </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="toggle">
+      <div class="item active">
+        <p>Desktop</p>
+      </div>
+      <div class="item">
+        <p>Mobile</p>
+      </div>
+    </div> -->
+    <div class="columns section-columns is-centered">
+      <div class="column is-10">
+        <div class="columns section-columns is-centered">
+          <div class="column is-12-desktop is-11-tablet is-10-mobile">
+            <img src="stride-full.jpg" alt="An image of zobelaerialphotography.com">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="testimonial">
+
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-10-desktop is-four-fifths-tablet is-four-fifths-mobile">
+          <p>Unfortunately, Stride Advisors ran into some problems and was not able to use my work after I completed it. You
+            can visit the landing pages
+            <a href="https://stride.isaacabrahamson.com/" target="_blank">on my server</a> if you are interested in trying the email capture form out.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section alternate" id="projects">
+  <div class="columns section-columns is-centered">
+    <div class="column is-10">
+      <h2>Other Projects</h2>
+
+      <div class="container">
+
+        <div class="columns is-desktop is-centered is-variable is-8">
+          <div class="column">
+            <a href="#">
+              <img src="zap.png" alt="An image of Stride Advisors">
+            </a>
+          </div>
+
+          <div class="column">
+            <a href="#">
+              <img src="goober.png" alt="An image of Goober">
+            </a>
+          </div>
+
+          <div class="column">
+            <a href="#">
+              <img src="sideways.png" alt="An image of Stride Advisors">
+            </a>
+          </div>
+
+          <div class="column">
+            <a href="#">
+              <img src="simon.png" alt="An image of Simon Says">
+            </a>
+          </div>
+
+          <div class="column">
+            <a href="#">
+              <img src="nurl.png" alt="An image of ninjaURL">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact me</h2>
+  <h5>Interested in working on a project together? I'm open for new business.</h5>
+  <form action="https://formspree.io/hello@isaacabrahamson.com" method="POST" autocomplete="off">
+    <input class="value-input" type="text" name="name" placeholder="Your name" data-lpignore="true">
+    <input class="value-input" type="email" name="email" placeholder="Your email" data-lpignore="true">
+    <input class="value-input input-last" type="text" name="message" placeholder="Your message" data-lpignore="true">
+    <input type="submit" class="btn-fill" value="Send">
+    <input type="hidden" name="_subject" value="Web development services" />
+    <input type="hidden" name="_next" value="/portfolio/thanks" />
+  </form>
+</section>
+
+<hr class="divider"></hr>
+
+<section class="section" id="social">
+  <p>Designed and developed by me
+    <sup>duh</sup>
+  </p>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/isaacabrahamson/" target="_blank">
+      <i class="fab fa-linkedin-in fa-3x"></i>
+    </a>
+    <a href="https://github.com/IsaacAbrahamson" target="_blank">
+      <i class="fab fa-github fa-3x"></i>
+    </a>
+    <a href="https://forum.freecodecamp.org/u/IsaacAbrahamson/summary" target="_blank">
+      <i class="fab fa-free-code-camp fa-3x"></i>
+    </a>
+  </div>
+</section>
+
+
+
+<!-- Initialize libraries -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+  sr.reveal('#company .is-8', {
+    duration: 500,
+    distance: '10px',
+    scale: '1',
+    delay: 200,
+    mobile: false,
+  });
+
+  sr.reveal('#problem', {
+    duration: 500,
+    distance: '20px',
+    scale: '1',
+    delay: 200,
+    origin: 'left',
+    mobile: false,
+  });
+
+  sr.reveal('#solution', {
+    duration: 500,
+    distance: '20px',
+    scale: '1',
+    delay: 200,
+    origin: 'right',
+    mobile: false,
+  });
+
+  sr.reveal('#overview .video-container', {
+    duration: 500,
+    distance: '20px',
+    scale: '1',
+    delay: 200,
+    origin: 'bottom',
+    mobile: false,
+  });
+
+  var hamburger = document.querySelector(".hamburger");
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("is-active");
+  });
+</script>
+
+<!-- Custom Scripts -->
+<script src="scripts/index.js"></script>
+<script src="scripts/parallax.js"></script>
