@@ -243,7 +243,7 @@ h5 {
   text-align: center;
 }
 
-p {
+a, p {
   color: #9294a8;
   font-size: 18px;
   line-height: 160%;
@@ -486,6 +486,26 @@ blockquote .quote {
   }
 }
 
+#cases a {
+  display: block;
+  font-weight: 500;
+  margin-top: 15px;
+  transition: all 300ms;
+}
+
+#cases a:hover {
+  color: black;
+}
+
+#cases svg {
+  position: relative;
+  left: 0px;
+  transition: left 300ms;
+}
+
+#cases a:hover svg {
+  left: 10px;
+}
 
 
 
