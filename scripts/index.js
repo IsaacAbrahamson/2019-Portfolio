@@ -32,34 +32,6 @@ document.addEventListener('scroll', function () {
   document.querySelector('.learn-more').style.opacity = 1 - (window.pageYOffset / 200)
 });
 
-// smooth scrolling
-function scrollTo(element, to, duration) {
-  if (duration < 0) return;
-  var difference = to - element.scrollTop;
-  var perTick = difference / duration * 10;
-
-  setTimeout(function() {
-      element.scrollTop = element.scrollTop + perTick;
-      if (element.scrollTop === to) return;
-      scrollTo(element, to, duration - 10);
-  }, 10);
-}
-
-// click handler for all anchor tags
-function callback(e) {
-  var e = window.e || e;
-
-  if (e.target.tagName !== 'LI') return;
-
-  if (window.innerWidth > 1024) {
-    e.preventDefault()
-    let href = e.target.parentNode.href.toString()
-    let id = href.slice(href.indexOf('#') + 1)
-    scrollTo(document.documentElement, document.getElementById(id).offsetTop, 600);
-  }  
-}
-document.addEventListener('click', callback, false);
-
 // hide navbar on scroll
 window.addEventListener('scroll', function(e) {
   if(window.scrollY > 10) {
