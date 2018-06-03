@@ -587,15 +587,16 @@ nav a {
   color: rgba(255, 255, 255, 0.58);
   font-weight: 500;
   transition: 400ms;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 nav a li {
   font-size: 30px;
 }
 
-nav a:nth-of-type(2), nav a:nth-of-type(3) {
-  margin-left: 40px;
-  margin-right: 40px;
+nav a:first-of-type, nav a:last-of-type {
+  margin: 0;
 }
 
 @media screen and (max-width: 360px) {
