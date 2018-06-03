@@ -859,7 +859,7 @@ nav a li {
   font-size: 30px;
 }
 
-nav a:nth-of-type(2) {
+nav a:nth-of-type(2), nav a:nth-of-type(3) {
   margin-left: 40px;
   margin-right: 40px;
 }
