@@ -570,18 +570,20 @@ nav button.hamburger {
 nav a {
   display: flex;
   align-items: center;
-  color: rgba(255, 255, 255, 0.58);
+  color: #9294a84d;
   font-weight: 500;
   transition: 400ms;
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 nav a li {
   font-size: 30px;
 }
 
-nav a:first-of-type, nav a:last-of-type {
+nav a:not(.logo) {
+  margin-right: 40px;
+}
+
+nav a:last-of-type {
   margin: 0;
 }
 
