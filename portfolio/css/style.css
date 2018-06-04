@@ -541,6 +541,31 @@ blockquote .quote {
 	}
 }
 
+#projects a {
+  display: block;
+  font-weight: 500;
+  margin-top: 15px;
+  transition: all 300ms;
+}
+
+#projects a:hover {
+  color: black;
+}
+
+#projects svg {
+  position: relative;
+  left: 0px;
+  transition: left 300ms;
+}
+
+#projects a:hover svg {
+  left: 10px;
+}
+
+#projects em {
+  font-size: 15px;
+}
+
 
 
 
