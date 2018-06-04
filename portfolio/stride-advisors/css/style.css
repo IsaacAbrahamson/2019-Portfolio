@@ -570,7 +570,7 @@ nav button.hamburger {
 nav a {
   display: flex;
   align-items: center;
-  color: #9294a84d;
+  color: rgba(76, 76, 76, 0.4);
   font-weight: 500;
   transition: 400ms;
 }
