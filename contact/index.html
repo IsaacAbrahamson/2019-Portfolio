@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Isaac Abrahamson</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Isaac Abrahamson is a self-motivated and talented young web developer working primarily with full-stack JavaScript and WordPress. He currently lives near Iowa City, Iowa.">
+<meta name="keywords" content="web developer, freelance web developer, JavaScript developer, WordPress developer, Isaac Abrahamson">
+<meta name="author" content="Isaac Abrahamson">
+
+
+<!-- ScrollReveal.js -->
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+  window.sr = ScrollReveal();
+
+  // Add class to <html> if ScrollReveal is supported
+  // Note: this method is deprecated, and only works in version 3
+  if (sr.isSupported()) {
+    document.documentElement.classList.add('sr');
+  }
+</script>
+<style>
+  /* Ensure elements load hidden before ScrollReveal runs */
+
+  .sr .fooReveal {
+    visibility: hidden;
+  }
+</style>
+
+<!-- Bulma Framework -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500" rel="stylesheet">
+
+<!-- Icons -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+  crossorigin="anonymous"></script>
+<link href="css/hamburgers.css" rel="stylesheet">
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="css/style.css">
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+
+<div class="mobile-menu">
+  <ul class="nav-menu">
+    <a href="/">
+      <li>Home</li>
+    </a>
+    <a href="/portfolio">
+      <li>Case Studies</li>
+    </a>
+    <a href="/contact">
+      <li>Contact</li>
+    </a>
+  </ul>
+</div>
+
+<main>
+  <div id="overlay" class="bg-animated">
+    <nav>
+      <div class="nav-inner">
+        <a class="logo" href="/">
+          <p>Isaac Abrahamson</p>
+        </a>
+
+        <button class="hamburger hamburger--emphatic" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <ul class="desktop-menu">
+          <a href="/">
+            <li>home</li>
+          </a>
+          <a href="/portfolio">
+            <li>case studies</li>
+          </a>
+          <a href="/contact">
+            <li>contact</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="spacer"></div>
+    <h2>Contact Me</h2>\
+    <h5>I'll do my best to respond within 48 hours. Thank you!</h5>
+
+    <section class="section" id="social">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/isaacabrahamson/" target="_blank">
+          <i class="fab fa-linkedin-in fa-3x"></i>
+        </a>
+        <a href="https://github.com/IsaacAbrahamson" target="_blank">
+          <i class="fab fa-github fa-3x"></i>
+        </a>
+        <a href="https://forum.freecodecamp.org/u/IsaacAbrahamson/summary" target="_blank">
+          <i class="fab fa-free-code-camp fa-3x"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <form action="https://formspree.io/hello@isaacabrahamson.com" method="POST" autocomplete="off">
+        <input class="value-input" type="text" name="name" placeholder="Your name" data-lpignore="true">
+        <input class="value-input" type="email" name="email" placeholder="Your email" data-lpignore="true">
+        <input class="value-input input-last" type="text" name="message" placeholder="Your message" data-lpignore="true">
+        <input type="submit" class="btn-fill" value="Send">
+        <input type="hidden" name="_subject" value="Web development services" />
+        <input type="hidden" name="_next" value="/portfolio/thanks" />
+      </form>
+    </section>
+
+  </div>
+</main>
+
+
+
+
+<!-- Internet Explorer Warning -->
+<p id="ie">This website only works with modern web browsers. Please switch to any modern browser (i.e. not Internet Explorer) to properly
+  view my site. Thank you!</p>
+
+<!-- Initialize libraries -->
+<script>
+  sr.reveal('h1', {
+    duration: 500,
+    distance: '10px',
+    scale: '1',
+    delay: 200
+  });
+
+  sr.reveal('#hero p.subtitle', {
+    duration: 500,
+    distance: '20px',
+    scale: '1',
+    delay: 400
+  });
+
+  var hamburger = document.querySelector(".hamburger");
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("is-active");
+  });
+</script>
+
+<!-- Custom Scripts -->
+<script src="scripts/index.js"></script>
