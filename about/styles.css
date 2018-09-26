@@ -29,9 +29,24 @@ p {
     font-size: 20px;
 }
 
+#about p {
+    margin-top: 10px;
+    line-height: 150%;
+}
+
+a {
+    color: #2196f3;
+    text-decoration: none;
+}
+
 h3 {
     font-size: 30px;
     font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#about h3:not(:first-of-type) {
+    margin-top: 60px;
 }
 
 img {
@@ -46,6 +61,5 @@ img {
     color: #2d2d2d;
     font-family: 'Raleway', sans-serif;
     box-shadow: 0 10px 50px 0 rgba(61,64,80,0.13);
-    margin-bottom: 80px;
     z-index: 99;
 }
