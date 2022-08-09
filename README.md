@@ -10,3 +10,5 @@ https://2019.iabrahamson.com/portfolio
 This is the third version of my personal website that I made in 2019. You can easily see the progress in my skills from the 2016 and 2017 versions. There are definitely some design flaws and inconsistencies, but it looks and behaves much more like a complete website than the previous portfolio websites I had made.
 
 I even included two full case studies complete with videos (albeit cringy).
+
+The contact form used formspree and actually worked while I had the site up. I disabled the form and several of the buttons as this site is just for reference now instead of an actual portfolio.
